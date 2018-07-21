@@ -1,33 +1,73 @@
+#!/usr/bin/env node
+
 'use strict';
+
+/*****************************************************
+ * Main CLI program
+ *****************************************************/
+
 
 let cli = require("commander");
 let api = require("./lib/api");
+let data = require("./lib/data");
+let webapi = require("./web");
 
 
 cli
   .option('-a, --add', 'Performs an arithmetic addition of the provided list of values (space separated).')
-  .option('-s, --sub', "Performs an arithmetic subtraction of the provided list of values (space separated)..")
-  .option('-m, --mul', "Performs an arithmetic multiplication of the provided list of values (space separated)..")
-  .option('-d, --div', "Performs an arithmetic division of the provided list of values (space separated)..")
+  .option('-s, --sub', "Performs an arithmetic subtraction of the provided list of values (space separated).")
+  .option('-m, --mul', "Performs an arithmetic multiplication of the provided list of values (space separated).")
+  .option('-d, --div', "Performs an arithmetic division of the provided list of values (space separated).")
   .option('-f, --fact', "Performs a factorial calculation of the provided first integer value, ignoring if more than one value is provied. Value must be an integer.")
+  .option('-p, --persist', "If set, it persists the result in the environment and next calculation picks it up")
+  .option('-c, --clear', "Clears any previously persisted value")
+  .option('-w, --web', "Start the Web API, override the port with --port <port_number>")
+  .option('--port', "override the port number, default is 3000")  
   .parse(process.argv);
 
 if (cli.add){
-  console.log(api.add(cli.args));
+  api.add(cli.args, cli.persist, (value)=>{
+    console.log(value);
+  });
 }else{ 
   if(cli.sub){
-    console.log(api.sub(cli.args));
+    api.sub(cli.args, cli.persist, (value)=>{
+      console.log(value);
+    });
   }else{
   	if(cli.mul){
-      console.log(api.mul(cli.args));
+      api.mul(cli.args, cli.persist, (value)=>{
+        console.log(value);
+      });
     }else{
       if(cli.div){
-        console.log(api.div(cli.args));
+        api.div(cli.args, cli.persist, (value)=>{
+          console.log(value);
+        });
       }else{
         if(cli.fact){
-          console.log(api.fact(cli.args));
+          api.fact(cli.args, false, (value)=>{  //factorial never takes in persisted values
+            console.log(value);
+          });
         }else{
-          console.log('calcx calculator CLI tool. type --help for command-line usage.');
+          if(cli.clear){
+            data.resetLastResult((value)=>{
+              process.exit(0);
+            });
+          }else{
+            if(cli.web){
+              let options = {};
+              if (cli.port && cli.args.length > 0){
+                options.port = parseInt(cli.args[0]);
+              }
+              //console.log(cli);
+              webapi.start(options, ()=>{
+                
+              });
+            }else{
+              console.log('calcx calculator CLI tool. type --help for command-line usage.');
+            }
+          }
         }
       }
     }
