@@ -11,7 +11,7 @@
     "url": "git+https://github.com/tcardoso2/calcx.git"
   },
   "bin": {
-    "calcx": "./bin/calcx"
+    "calcx": "./program.js"
   },
   "devDependencies": {
     "chai": "*",
