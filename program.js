@@ -9,7 +9,8 @@
 
 let cli = require("commander");
 let api = require("./lib/api");
-let data = require("./lib/data");
+var cache = require('persistent-cache');
+let storage = cache();
 let webapi = require("./web");
 
 
@@ -24,6 +25,12 @@ cli
   .option('-w, --web', "Start the Web API, override the port with --port <port_number>")
   .option('--port', "override the port number, default is 3000")  
   .parse(process.argv);
+
+for (let arg in cli.args){
+  if (isNaN(cli.args[arg])){
+    throw new Error("Arguments can only be numbers!");
+  }
+}
 
 if (cli.add){
   api.add(cli.args, cli.persist, (value)=>{
@@ -51,8 +58,8 @@ if (cli.add){
           });
         }else{
           if(cli.clear){
-            data.resetLastResult((value)=>{
-              process.exit(0);
+            storage.put("calcx", 0, () =>{
+              //process.exit(0);
             });
           }else{
             if(cli.web){

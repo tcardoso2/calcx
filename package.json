@@ -11,8 +11,7 @@
     "url": "git+https://github.com/tcardoso2/calcx.git"
   },
   "bin": {
-    "calcx": "program.js",
-    "testcalcx": "./bin/calcx"
+    "calcx": "./bin/calcx"
   },
   "devDependencies": {
     "chai": "*",
@@ -31,6 +30,8 @@
     "commander": "^2.16.0",
     "express": "^4.16.3",
     "node-cmd": "^3.0.0",
+    "node-persist": "^3.0.1",
+    "persistent-cache": "^1.1.1",
     "tracer": "^0.9.1"
   }
 }
