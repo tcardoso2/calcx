@@ -1,0 +1,31 @@
+{
+  "name": "calcx",
+  "version": "0.1.0",
+  "description": "A very basic CLI calculator tool and also a web API",
+  "main": "program.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcardoso2/calcx.git"
+  },
+  "bin": {
+    "calcx": "./bin/calcx.js"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chai-as-promised": "*",
+    "mocha": "*"
+  },
+  "author": "Tiago Cardoso <tcardoso@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcardoso2/calcx/issues"
+  },
+  "homepage": "https://github.com/tcardoso2/calcx#readme",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "node-cmd": "^3.0.0"
+  }
+}
