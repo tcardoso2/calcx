@@ -4,6 +4,9 @@
 
 /*****************************************************
  * Main CLI program
+ * Where program flags / options are coded.
+ * Code is self-explanatory, options are available via
+ * calcx --help
  *****************************************************/
 
 

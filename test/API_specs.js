@@ -52,7 +52,6 @@ describe(`When calling the API,`, function() {
             "<url>/mul/op1/op2" : "Performs an arithmetic multiplication of 2 values",
             "<url>/div/op1/op2" : "Performs an arithmetic division of 2 values",
             "<url>/fact/op1"    : "Performs an arithmetic subtraction of 1 value",
-            "<url>/getlast"     : "Gets the last result",
             "<url>/help"        : "Help API commands"
           }
         });

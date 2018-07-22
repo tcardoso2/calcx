@@ -10,11 +10,12 @@ Type "calcx --help" for instructions.
   - Install globally: run: "sudo npm install calcx-x.y.z.tgz -g"
 
 * Run:
-  - type "calcx" anywhere in the console.
+  - type "calcx" anywhere in the console.  
 
 * Testing:  
-  - run: "npm test"  
+  - run: "npm test" inside the cloned directory.  
   
 * History:  
+    - v 0.3.0:  Added documentation (inline), see [API documentation](/DOCUMENTATION.md)
     - v 0.2.0:  Added Web API, finished global command;   
     - v 0.1.0:  First version with CLI functions for add, sub, mul, div and factorial calculation. Call it using node command for now, WIP on the global command.  

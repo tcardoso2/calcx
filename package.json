@@ -1,6 +1,6 @@
 {
   "name": "calcx",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A very basic CLI calculator tool and also a web API",
   "main": "program.js",
   "scripts": {
