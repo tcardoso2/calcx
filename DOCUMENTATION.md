@@ -2,18 +2,18 @@
 
 ### Table of Contents
 
--   [get](#get)
--   [get](#get-1)
--   [get](#get-2)
--   [get](#get-3)
--   [get](#get-4)
--   [get](#get-5)
--   [get](#get-6)
+-   [root](#root)
+-   [help](#help)
 -   [add](#add)
 -   [sub](#sub)
 -   [mul](#mul)
 -   [div](#div)
 -   [fact](#fact)
+-   [add](#add-1)
+-   [sub](#sub-1)
+-   [mul](#mul-1)
+-   [div](#div-1)
+-   [fact](#fact-1)
 -   [defaultPort](#defaultport)
 -   [start](#start)
 -   [listen](#listen)
@@ -21,7 +21,9 @@
 -   [setOptions](#setoptions)
 -   [setupRoutes](#setuproutes)
 
-## get
+# Web API
+
+## root
 
 GET: Root (/) of the api
 
@@ -33,7 +35,7 @@ curl http://localhost:3000/
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** A json response Welcoming the user;
 
-## get
+## help
 
 GET: help (/help) information for the API.
 
@@ -45,7 +47,7 @@ curl http://localhost:3000/help
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns a simple json result with the several options for the API.
 
-## get
+## add
 
 GET: Adds (/add) 2 operands
 
@@ -64,7 +66,7 @@ curl http://localhost:3000/add/12/10
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the result of the operation in json format
 
-## get
+## sub
 
 GET: Subtracts (/sub) 2 operands
 
@@ -83,7 +85,7 @@ curl http://localhost:3000/sub/12/10
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the result of the operation in json format
 
-## get
+## mul
 
 GET: Multiplies (/mul) 2 operands
 
@@ -102,7 +104,7 @@ curl http://localhost:3000/mul/12/10
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the result of the operation in json format
 
-## get
+## div
 
 GET: Divides (/div) 2 operands
 
@@ -121,7 +123,7 @@ curl http://localhost:3000/div/12/10
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the result of the operation in json format
 
-## get
+## fact
 
 GET: Calculates the factorial (/fac) of the provided operand. Note only accepts one param, adding more will result in route pattern unmatch
 
@@ -300,6 +302,12 @@ console.
 **Parameters**
 
 -   `options`  
+
+**Examples**
+
+```javascript
+setOptions({port: 3000});
+```
 
 ## setupRoutes
 
