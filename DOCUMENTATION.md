@@ -2,6 +2,7 @@
 
 ### Table of Contents
 
+Web API:  
 -   [root](#root)
 -   [help](#help)
 -   [add](#add)
@@ -9,11 +10,13 @@
 -   [mul](#mul)
 -   [div](#div)
 -   [fact](#fact)
+Library:  
 -   [add](#add-1)
 -   [sub](#sub-1)
 -   [mul](#mul-1)
 -   [div](#div-1)
 -   [fact](#fact-1)
+Express Web-Server:  
 -   [defaultPort](#defaultport)
 -   [start](#start)
 -   [listen](#listen)
@@ -21,7 +24,7 @@
 -   [setOptions](#setoptions)
 -   [setupRoutes](#setuproutes)
 
-# Web API
+# Web API (see routes.js)
 
 ## root
 
@@ -141,7 +144,9 @@ curl http://localhost:3000/fact/4
 
 Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the result of the operation in json format
 
-## 
+# Library (see lib/api.js)
+
+## Operation (internal)
 
 operation generic function. Called by every operation function. Calls recursively the add/sub/mul/div/fact
 functions for each operand (step). Improvements on later versions could include calculating more operands and
