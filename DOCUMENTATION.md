@@ -148,7 +148,7 @@ persisting result. Not included in the current version.
 **Parameters**
 
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the required operands
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 -   `step` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** callback Function which calls any of the add/sub/mul/div/fact functions
 -   `final` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** callback Function called after calculation is over
 
@@ -161,7 +161,7 @@ Add operation
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the 2 operands, see example
 -   `persist`  
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** function, called when operation is done
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 
 **Examples**
 
@@ -180,7 +180,7 @@ Subract operation
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the 2 operands, see example
 -   `persist`  
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** function, called when operation is done
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 
 **Examples**
 
@@ -199,7 +199,7 @@ Multiplication operation
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the 2 operands, see example
 -   `persist`  
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** function, called when operation is done
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 
 **Examples**
 
@@ -218,7 +218,7 @@ Division operation
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the 2 operands, see example
 -   `persist`  
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** function, called when operation is done
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 
 **Examples**
 
@@ -237,7 +237,7 @@ Factorial operation
 -   `args` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** expects a json object with the 1 operand, see example
 -   `persist`  
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** function, called when operation is done
--   `if` **bool** true would persist the value (WIP). Not implemented in this version.
+-   `if` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** true would persist the value (WIP). Not implemented in this version.
 
 **Examples**
 
